@@ -50,19 +50,6 @@ app.get("/getuserbyId",(req,res)=>{
     
 })
 
-//add user using get request
-app.get("/users",(req,res)=>{
-  let {id,name,address} = req.query;
-  let newUser= {
-    id:id,
-    name:name,
-    address:address
-  }
-  usersdata.push(newUser);
-  res.send(usersdata)
-
-})
-
 
 
 
