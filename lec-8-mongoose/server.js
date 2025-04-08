@@ -13,6 +13,10 @@ app.post("/users",async (req,res)=>{
     res.send("user added successfully")
 
 })
+app.get("/users",async(req,res)=>{
+    let allusers=await User.find()
+    res.send(allusers)
+})
 app.post("/blogs",async(req,res)=>{
     let {title,content,author} = req.body;
     let newBlog= new Blog({
