@@ -32,6 +32,13 @@ app.get("/blogpage",(req,res)=>{
   })
 })
 
+app.get("/userpage",(req,res)=>{
+  res.render("user",{
+    name:"Nitesh",
+    followers:["Ritik","pranav","pratiyushs"]
+  })
+})
+
 app.use("/users",userRoutes);
 app.use("/blogs",blogRoutes);
 

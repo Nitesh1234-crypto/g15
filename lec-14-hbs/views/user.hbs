@@ -13,20 +13,15 @@
             <li><a href="/userpage">users</a></li>
         </ul>
     </header>
-    <h1>Blog page</h1>
-    {{!-- <h1>{{title}}</h1>
-    <img src={{banner}} alt="">
-    <p>{{content}}</p> --}}
-    {{#if blogs}}
-    {{#each blogs}}
-    <div>
-     <h1>{{title}}</h1>
-     <img src={{banner}} alt="">
-     <p>{{content}}</p>
-     </div>
-    {{/each}}
-    {{else}}
-    <h4>No blogs found!!</h4>
-    {{/if}}
+    <h1>{{name}}</h1>
+    <ul>
+        {{#each followers as |f|}}
+            <li>{{f}}</li>
+        {{/each}}
+         {{#each followers }}
+            <li>{{this}}</li>
+        {{/each}}
+    </ul>
+ 
 </body>
 </html>
