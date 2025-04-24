@@ -12,6 +12,16 @@ router.post("/",async(req,res)=>{
     res.send("blog added!!")
 })
 
+router.get("/",async(req,res)=>{
+    //send a fully render blog page
+    let blogs=await Blog.find();
+    console.log(blogs)
+    res.render("allblogs",{
+        blogs:blogs
+    })
+
+})
+
 
 
 
