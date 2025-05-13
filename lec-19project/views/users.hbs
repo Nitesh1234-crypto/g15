@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  {{> header}}
+    <h1>All users page</h1>
+    <div>
+        {{#if users}}
+        {{#each users as |user|}}
+          <h3>{{user.username}}</h3>
+          <h4>{{user.email}}</h4>
+            <a href="/users/profile/{{user._id}}">Profile</a>
+        {{/each}}
+        {{else}}
+        <h1>No users found</h1>
+        {{/if}}
+    </div>
+</body>
+</html>
